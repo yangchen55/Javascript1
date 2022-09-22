@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="organizationRecord" minOccurs="0" maxOccurs="unbounded">
+<xsd:complexType>
+<xsd:sequence>
+
+ <xsd:element name="company" type="xsd:string"/>
+<xsd:element name="servicesRecord">
+<xsd:complexType>
+ <xsd:sequence>
+  <xsd:element name="service" type="xsd:string"/>
+  <xsd:element name="days" type="xsd:string"/>
+  <xsd:element name="cost" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+
+
+
+ 
+<xsd:attribute name="date" type="xsd:string" />
+
+</xsd:schema>

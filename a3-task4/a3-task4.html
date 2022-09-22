@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY phto album</title>
+    <style></style>
+  </head>
+  <body>
+    <h1 id="webtitle" onmouseover="changeColor();">my photo album !</h1>
+
+    <img
+      src="anime.jpg"
+      alt="image1"
+      width="20%"
+      id="first"
+      onmouseout="rotate();"
+    />
+    <br />
+    <img
+      src="logo.png"
+      alt="image2"
+      width="20%"
+      id="second"
+      onmouseenter="skew();"
+    />
+
+    <img
+      src="figma.png"
+      alt="image3"
+      width="20%"
+      id="third"
+      onmouseover="relocate();"
+    />
+
+    <script>
+      // function to change randomly change color
+      function changeColor() {
+        colorList = ["blue", "pink", "red", "yellow", "violet"];
+        var index = Math.floor(Math.random() * colorList.length);
+        var a = document.getElementById("webtitle");
+        a.style.color = colorList[index];
+      }
+
+      function rotate() {
+        var Fimage = document.getElementById("first");
+        Fimage.style.transform = "rotate(60deg)";
+      }
+
+      function skew() {
+        var Simage = document.getElementById("second");
+        Simage.style.transform = "skew(30deg)";
+        Simage.style.scale = "2";
+      }
+
+      debugger;
+      function relocate() {
+        let Timage1 = document.getElementById("third");
+        Timage1.style.rotate = "-90deg";
+        Timage1.style.translate = " 0 90px";
+      }
+    </script>
+  </body>
+</html>
